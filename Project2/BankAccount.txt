@@ -1,0 +1,23 @@
+class BankAccount {
+    
+    private var balance : Float = 0
+ 
+    init (newBalance : Float) {
+        balance = newBalance // Nike > NewBalance
+    }
+    
+    init() {
+        balance = 0
+    }
+    
+    func credit(amountToCredit : Float) {
+        balance += amountToCredit
+    }
+    
+    func debit(amountToDebit : Float) {
+        if amountToDebit < 0 {
+            return
+        }
+        balance -= amountToDebit
+    }
+}
